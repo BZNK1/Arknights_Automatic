@@ -1,0 +1,21 @@
+#pragma once
+#ifndef __ADBHANDLER_H__
+#define __ADBHANDLER_H__
+#pragma once
+
+#include"stdafx.h"
+#include<windows.h>
+
+class AdbContainer {
+	private:
+		HANDLE adbin;
+		HANDLE adbout;
+
+	public:
+		AdbContainer(string);
+		char* adbread();
+		void adbwrite(string);
+		void destroy();
+};
+
+#endif
